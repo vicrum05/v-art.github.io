@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/w3.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+	<link href='https://fonts.googleapis.com/css?family=Dancing+Script' rel='stylesheet' type='text/css'>
+	<style>
+	.material-icons{vertical-align:-14%}
+	p, h1, h2, h3, h4, h5, a, button, td, li {
+		font-family: 'Dancing Script', cursive;
+	}
+	a {
+		text-decoration: none;
+	}
+	body {
+		background-color: black;
+	}
+	</style>
+	<title>V-Art</title>
+</head>
+<body>
+
+<!-- Header
+==================== -->
+<div id="head" class="w3-top w3-center w3-container w3-animate-opacity">
+  <ul class="w3-navbar w3-xlarge w3-text-white">
+    <li class="w3-col s1 m1 l1"><abbr title="Gallery"><i class="material-icons w3-xlarge w3-btn w3-border w3-round-large w3-hover-white" id="menu" onclick="galleryShowHide();">apps</i></abbr></li>
+    <li class="w3-col s1 m1 l1"><abbr title="Hide-Menu"><i class="material-icons w3-xlarge w3-btn w3-border w3-round-large w3-hover-white" id="hideMenu" onclick="hideHeadFoot();">zoom_out_map</i></abbr></li>
+    <li class="w3-col s8 m8 l8"><abbr title="Search"><i class="material-icons w3-xlarge w3-btn w3-border w3-round-large w3-hover-white" id="search">search</i></abbr></li>
+    <li class="w3-col s1 m1 l1"><abbr title="Picture-Info"><i class="material-icons w3-xlarge w3-btn w3-border w3-round-large w3-hover-white" id="info">info_outline</i></abbr></li>
+    <li class="w3-col s1 m1 l1"><abbr title="About-Us"><i class="material-icons w3-xlarge w3-btn w3-border w3-round-large w3-hover-white" id="bio" onclick="profileShowHide();">face</i></abbr></li>
+  </ul>
+</div>
+<!-- Slideshow
+================== -->
+<div id="slide" class="w3-black w3-col s12 m12 l12" class="w3-btn" onclick="showHeadFoot();">
+	<img class="slides w3-animate-right" src="images/1.jpg" style="width:100%;">
+	<img class="slides w3-animate-right" src="images/2.jpg" style="width:100%;">
+	<img class="slides w3-animate-right" src="images/3.jpg" style="width:100%;">
+	<img class="slides w3-animate-right" src="images/4.jpg" style="width:100%;">
+	<img class="slides w3-animate-right" src="images/5.jpg" style="width:100%;">
+	<img class="slides w3-animate-right" src="images/6.jpg" style="width:100%;">
+	<img class="slides w3-animate-right" src="images/7.jpg" style="width:100%;">
+	<img class="slides w3-animate-right" src="images/8.jpg" style="width:100%;">
+	<img class="slides w3-animate-right" src="images/9.jpg" style="width:100%;">
+	<img class="slides w3-animate-right" src="images/10.jpg" style="width:100%;">
+</div>
+<!-- Footer
+============== -->
+<div id="foot" class="w3-bottom w3-center w3-container w3-text-white w3-animate-opacity">
+	<p>Copyright Information</p>
+</div>
+<!-- Gallery
+================= -->
+<div id="gallery" class="w3-hide w3-container w3-black w3-center">
+	<br>
+	<br>
+	<br>
+	<h1 class="w3-border w3-round-large">Gallery</h1>
+	<div class="w3-black w3-center w3-col s6 m4 l3">
+		<div class="w3-card-2 w3-center w3-margin w3-round-large w3-border w3-hover-white">
+			<a href="images/1.jpg" target="_blank">
+				<img class="w3-image w3-round-large" src="images/1.jpg" style="width:100%">
+				<h3>Lonesome Home</h3>
+			</a>
+		</div>
+	</div>
+	<div class="w3-black w3-center w3-col s6 m4 l3">
+		<div class="w3-card-2 w3-center w3-margin w3-round-large w3-border w3-hover-white">
+			<a href="images/2.jpg" target="_blank">
+				<img class="w3-image w3-round-large" src="images/2.jpg" style="width:100%">
+				<h3>It's all about flicking numbers.</h3>
+			</a>
+		</div>
+	</div>
+	<div class="w3-black w3-center w3-col s6 m4 l3">
+		<div class="w3-card-2 w3-center w3-margin w3-round-large w3-border w3-hover-white">
+			<a href="images/3.jpg" target="_blank">
+				<img class="w3-image w3-round-large" src="images/3.jpg" style="width:100%">
+				<h3>She-Lion</h3>
+			</a>
+		</div>
+	</div>
+	<div class="w3-black w3-center w3-col s6 m4 l3">
+		<div class="w3-card-2 w3-center w3-margin w3-round-large w3-border w3-hover-white">
+			<a href="images/4.jpg" target="_blank">
+				<img class="w3-image w3-round-large" src="images/4.jpg" style="width:100%">
+				<h3>Jelly Beauty</h3>
+			</a>
+		</div>
+	</div>
+	<div class="w3-black w3-center w3-col s6 m4 l3">
+		<div class="w3-card-2 w3-center w3-margin w3-round-large w3-border w3-hover-white">
+			<a href="images/5.jpg" target="_blank">
+				<img class="w3-image w3-round-large" src="images/5.jpg" style="width:100%">
+				<h3>City that never sleeps.</h3>
+			</a>
+		</div>
+	</div>
+	<div class="w3-black w3-center w3-col s6 m4 l3">
+		<div class="w3-card-2 w3-center w3-margin w3-round-large w3-border w3-hover-white">
+			<a href="images/6.jpg" target="_blank">
+				<img class="w3-image w3-round-large" src="images/6.jpg" style="width:100%">
+				<h3>Beyond Buildings</h3>
+			</a>
+		</div>
+	</div>
+	<div class="w3-black w3-center w3-col s6 m4 l3">
+		<div class="w3-card-2 w3-center w3-margin w3-round-large w3-border w3-hover-white">
+			<a href="images/7.jpg" target="_blank">
+				<img class="w3-image w3-round-large" src="images/7.jpg" style="width:100%">
+				<h3>Sky-Moon-Clouds-Mountains</h3>
+			</a>
+		</div>
+	</div>
+	<div class="w3-black w3-center w3-col s6 m4 l3">
+		<div class="w3-card-2 w3-center w3-margin w3-round-large w3-border w3-hover-white">
+			<a href="images/8.jpg" target="_blank">
+				<img class="w3-image w3-round-large" src="images/8.jpg" style="width:100%">
+				<h3>Way Beyond</h3>
+			</a>
+		</div>
+	</div>
+	<div class="w3-black w3-center w3-col s6 m4 l3">
+		<div class="w3-card-2 w3-center w3-margin w3-round-large w3-border w3-hover-white">
+			<a href="images/9.jpg" target="_blank">
+				<img class="w3-image w3-round-large" src="images/9.jpg" style="width:100%">
+				<h3>You like my hair?!</h3>
+			</a>
+		</div>
+	</div>
+	<div class="w3-black w3-center w3-col s6 m4 l3">
+		<div class="w3-card-2 w3-center w3-margin w3-round-large w3-border w3-hover-white">
+			<a href="images/10.jpg" target="_blank">
+				<img class="w3-image w3-round-large" src="images/10.jpg" style="width:100%">
+				<h3>piXels</h3>
+			</a>
+		</div>
+	</div>
+	<div class="w3-black w3-center w3-col s6 m4 l3">
+		<div class="w3-card-2 w3-center w3-margin w3-round-large w3-border w3-hover-white">
+			<a href="images/1.jpg" target="_blank">
+				<img class="w3-image w3-round-large" src="images/1.jpg" style="width:100%">
+				<h3>Lonesome Home</h3>
+			</a>
+		</div>
+	</div>
+	<div class="w3-black w3-center w3-col s6 m4 l3">
+		<div class="w3-card-2 w3-center w3-margin w3-round-large w3-border w3-hover-white">
+			<a href="images/2.jpg" target="_blank">
+				<img class="w3-image w3-round-large" src="images/2.jpg" style="width:100%">
+				<h3>It's all about flicking numbers.</h3>
+			</a>
+		</div>
+	</div>
+	<div class="w3-black w3-center w3-col s6 m4 l3">
+		<div class="w3-card-2 w3-center w3-margin w3-round-large w3-border w3-hover-white">
+			<a href="images/3.jpg" target="_blank">
+				<img class="w3-image w3-round-large" src="images/3.jpg" style="width:100%">
+				<h3>She-Lion</h3>
+			</a>
+		</div>
+	</div>
+	<div class="w3-black w3-center w3-col s6 m4 l3">
+		<div class="w3-card-2 w3-center w3-margin w3-round-large w3-border w3-hover-white">
+			<a href="images/4.jpg" target="_blank">
+				<img class="w3-image w3-round-large" src="images/4.jpg" style="width:100%">
+				<h3>Jelly Beauty</h3>
+			</a>
+		</div>
+	</div>
+	<div class="w3-black w3-center w3-col s6 m4 l3">
+		<div class="w3-card-2 w3-center w3-margin w3-round-large w3-border w3-hover-white">
+			<a href="images/5.jpg" target="_blank">
+				<img class="w3-image w3-round-large" src="images/5.jpg" style="width:100%">
+				<h3>City that never sleeps.</h3>
+			</a>
+		</div>
+	</div>
+	<div class="w3-black w3-center w3-col s6 m4 l3">
+		<div class="w3-card-2 w3-center w3-margin w3-round-large w3-border w3-hover-white">
+			<a href="images/6.jpg" target="_blank">
+				<img class="w3-image w3-round-large" src="images/6.jpg" style="width:100%">
+				<h3>Beyond Buildings</h3>
+			</a>
+		</div>
+	</div>
+	<div class="w3-black w3-center w3-col s6 m4 l3">
+		<div class="w3-card-2 w3-center w3-margin w3-round-large w3-border w3-hover-white">
+			<a href="images/7.jpg" target="_blank">
+				<img class="w3-image w3-round-large" src="images/7.jpg" style="width:100%">
+				<h3>Sky-Moon-Clouds-Mountains</h3>
+			</a>
+		</div>
+	</div>
+	<div class="w3-black w3-center w3-col s6 m4 l3">
+		<div class="w3-card-2 w3-center w3-margin w3-round-large w3-border w3-hover-white">
+			<a href="images/8.jpg" target="_blank">
+				<img class="w3-image w3-round-large" src="images/8.jpg" style="width:100%">
+				<h3>Way Beyond</h3>
+			</a>
+		</div>
+	</div>
+	<div class="w3-black w3-center w3-col s6 m4 l3">
+		<div class="w3-card-2 w3-center w3-margin w3-round-large w3-border w3-hover-white">
+			<a href="images/9.jpg" target="_blank">
+				<img class="w3-image w3-round-large" src="images/9.jpg" style="width:100%">
+				<h3>You like my hair?!</h3>
+			</a>
+		</div>
+	</div>
+	<div class="w3-black w3-center w3-col s6 m4 l3">
+		<div class="w3-card-2 w3-center w3-margin w3-round-large w3-border w3-hover-white">
+			<a href="images/10.jpg" target="_blank">
+				<img class="w3-image w3-round-large" src="images/10.jpg" style="width:100%">
+				<h3>piXels</h3>
+			</a>
+		</div>
+	</div>
+	<br>
+	<br>
+	<br>
+</div>
+<!-- Profile
+=================== -->
+<div id="profile" class="w3-hide w3-container w3-black w3-center">
+	<br>
+	<br>
+	<br>
+	<h1 class="w3-border w3-round-large">Profile</h1>
+	<div class="w3-black w3-center w3-col s8 m8 l8">
+		<!-- Site
+		================ -->
+		<div id="site" class="w3-black w3-container w3-center w3-margin">
+			<h3 class="w3-border w3-round-large">Site</h3>
+			<div>
+				<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+				<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+				<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+			</div>
+		</div> <!-- End of Site -->
+		<!-- Team
+		================== -->
+		<div id="team" class="w3-hide w3-container w3-black w3-center w3-margin">
+			<h3 class="w3-round-large w3-border">Team</h3>
+			<div class="w3-center w3-col s12 m4 l4">
+				<div class="w3-border w3-round-large w3-margin w3-card-2 w3-hover-white">
+					<a href="">
+						<img class="w3-image w3-round-large" src="images/1.jpg" style="width:100%">
+						<h5>Name</h5>
+						<h5>Designation</h5>
+					</a>
+				</div>
+			</div>
+			<div class="w3-center w3-col s12 m4 l4">
+				<div class="w3-border w3-round-large w3-margin w3-card-2 w3-hover-white">
+					<a href="">
+						<img class="w3-image w3-round-large" src="images/2.jpg" style="width:100%">
+						<h5>Name</h5>
+						<h5>Designation</h5>
+					</a>
+				</div>
+			</div>
+			<div class="w3-center w3-col s12 m4 l4">
+				<div class="w3-border w3-round-large w3-margin w3-card-2 w3-hover-white">
+					<a href="">
+						<img class="w3-image w3-round-large" src="images/3.jpg" style="width:100%">
+						<h5>Name</h5>
+						<h5>Designation</h5>
+					</a>
+				</div>
+			</div>
+		</div> <!-- End of Team -->
+		<!-- Contact
+		================== -->
+		<div id="contact" class="w3-hide w3-container w3-black w3-center w3-margin">
+			<h3 class="w3-round-large w3-border">Contact</h3>
+			<div class="w3-col s12 m3 l3">
+				<div class="w3-margin w3-card-2 w3-border w3-round-large">
+					<p>Bhaktapur</p>
+					<p>POB No: 000</p>
+				</div>
+			</div>
+			<div class="w3-col s12 m3 l3">
+				<div class="w3-margin w3-card-2 w3-border w3-round-large">
+					<p>+977 0000000000 (Personal)</p>
+					<p>+977 000000 (Office)</p>
+					<p>+977 000000 (Fax)</p>
+				</div>
+			</div>
+			<div class="w3-col s12 m3 l3">
+				<div class="w3-margin w3-card-2 w3-border w3-round-large">
+					<p>v-art@v-art.com</p>
+					<p>v-art@v-art.com</p>
+					<p>v-art@v-art.com</p>
+				</div>
+			</div>
+			<div class="w3-col s12 m3 l3">
+				<div class="w3-margin w3-padding w3-card-2 w3-border w3-round-large">
+					<abbr title="Facebook"><i class="fa fa-facebook w3-xlarge w3-hover-white w3-btn w3-round-large w3-border w3-padding"></i></abbr>
+					<abbr title="YouTube"><i class="fa fa-youtube w3-xlarge w3-hover-white w3-btn w3-round-large w3-border w3-padding"></i></abbr>
+					<abbr title="Instagram"><i class="fa fa-instagram w3-xlarge w3-hover-white w3-btn w3-round-large w3-border w3-padding"></i></abbr>
+					<abbr title="Pinterest"><i class="fa fa-pinterest w3-xlarge w3-hover-white w3-btn w3-round-large w3-border w3-padding"></i></abbr>
+					<abbr title="Twitter"><i class="fa fa-twitter w3-xlarge w3-hover-white w3-btn w3-round-large w3-border w3-padding"></i></abbr>
+				</div>
+			</div>
+			<div class="w3-col s12 m12 l12">
+				<div class="w3-margin w3-card-2 w3-border w3-round-large" id="googleMap" style="height:400px;filter: grayscale(90%);-webkit-filter: grayscale(90%);"></div>
+			</div>
+		</div> <!-- End of Contact -->
+	</div>
+	<!-- Profile Navigation
+	========================== -->
+	<div class="w3-center w3-col s4 m4 l4">
+		<div class="w3-container w3-center w3-margin">
+			<a href="#"><h3 onclick="siteShow();" class="w3-border w3-round-large w3-hover-white">Site</h3></a>
+			<a href="#"><h3 onclick="teamShow();" class="w3-border w3-round-large w3-hover-white">Team</h3></a>
+			<a href="#"><h3 onclick="contactShow();" class="w3-border w3-round-large w3-hover-white">Contact</h3></a>
+		</div> <!-- End of Profile Navigation -->
+	</div>
+</div>
+
+<!-- Slideshow Script
+======================== -->
+<script type="text/javascript">
+	var myIndex = 0;
+	slideShow();
+
+	function slideShow() {
+	    var i;
+	    var x = document.getElementsByClassName("slides");
+	    for (i = 0; i < x.length; i++) {
+	       x[i].style.display = "none";
+	    }
+	    myIndex++;
+	    if (myIndex > x.length) {myIndex = 1}
+	    x[myIndex-1].style.display = "block";
+	    setTimeout(slideShow, 4000); // Change image every 4 seconds
+	}
+</script>
+<!-- Hide/Show Menu Script
+============================== -->
+<script type="text/javascript">
+	var head = document.getElementById("head");
+	var foot = document.getElementById("foot");
+	function hideHeadFoot() {
+		if (head.className.indexOf("w3-hide") == -1)	{
+			if (head.className.indexOf("w3-show") == -1) {
+				head.className += " w3-hide";
+			}
+			head.className = head.className.replace("w3-show", "w3-hide");
+		}
+		if ((foot.className.indexOf("w3-hide") == -1))	{
+			if (foot.className.indexOf("w3-show") == -1) {
+				foot.className += " w3-hide";
+			}
+			foot.className = foot.className.replace("w3-show", "w3-hide");
+		}
+	}
+	function showHeadFoot() {
+		if(head.className.indexOf("w3-show") == -1) {
+			head.className = head.className.replace("w3-hide", "w3-show");
+		}
+		if(foot.className.indexOf("w3-show") == -1) {
+			foot.className = foot.className.replace("w3-hide", "w3-show");
+		}
+	}
+</script>
+<!-- Hide/Show Gallery/Profile Script
+================================= -->
+<script type="text/javascript">
+	var slide = document.getElementById("slide");
+	var gallery = document.getElementById("gallery");
+	var hideMenu = document.getElementById("hideMenu");
+	var info = document.getElementById("info");
+	var profile = document.getElementById("profile");
+	function galleryShowHide() {
+		if(slide.className.indexOf("w3-hide") == -1) {
+			if (profile.className.indexOf("w3-hide") == -1) {
+				profile.className += " w3-hide";
+			}
+			slide.className += " w3-hide";
+			hideMenu.className += " w3-disabled";
+			info.className += " w3-disabled";
+			gallery.className = gallery.className.replace("w3-hide", "");
+		}
+		else {
+			slide.className = slide.className.replace("w3-hide", "");
+			hideMenu.className = hideMenu.className.replace("w3-disabled", "");
+			info.className = info.className.replace("w3-disabled", "");
+			gallery.className += " w3-hide";
+		}
+	}
+	function profileShowHide() {
+		if(slide.className.indexOf("w3-hide") == -1) {
+			if (gallery.className.indexOf("w3-hide") == -1) {
+				gallery.className += " w3-hide";
+			}
+			slide.className += " w3-hide";
+			hideMenu.className += " w3-disabled";
+			info.className += " w3-disabled";
+			profile.className = profile.className.replace("w3-hide", "");
+		}
+		else {
+			slide.className = slide.className.replace("w3-hide", "");
+			hideMenu.className = hideMenu.className.replace("w3-disabled", "");
+			info.className = info.className.replace("w3-disabled", "");
+			profile.className += " w3-hide";
+		}
+	}
+</script>
+<!-- Hide/Show Profile Content i.e. Site/Team/Contatct Via Profile Navigation
+=================================================================================  -->
+<script type="text/javascript">
+	var site = document.getElementById("site");
+	var team = document.getElementById("team");
+	var contact = document.getElementById("contact");
+	function siteShow() {
+		if (team.className.indexOf("w3-hide") == -1) {
+			team.className += " w3-hide";
+		}
+		if (contact.className.indexOf("w3-hide") == -1) {
+			contact.className += " w3-hide";
+		}
+		site.className = site.className.replace("w3-hide", "");
+	}
+	function teamShow() {
+		if (site.className.indexOf("w3-hide") == -1) {
+			site.className += " w3-hide";
+		}
+		if (contact.className.indexOf("w3-hide") == -1) {
+			contact.className += " w3-hide";
+		}
+		team.className = team.className.replace("w3-hide", "");
+	}
+	function contactShow() {
+		if (site.className.indexOf("w3-hide") == -1) {
+			site.className += " w3-hide";
+		}
+		if (team.className.indexOf("w3-hide") == -1) {
+			team.className += " w3-hide";
+		}
+		contact.className = contact.className.replace("w3-hide", "");
+	}
+</script>
+<!-- Google Map Script
+======================== -->
+<script src="http://maps.googleapis.com/maps/api/js"></script>
+<script>
+	var myCenter = new google.maps.LatLng(27.678450, 85.438483);    
+	function initialize() {
+		var mapProp = {
+			center:myCenter,
+			zoom:12,
+			scrollwheel:false,
+			draggable:false,
+			mapTypeId:google.maps.MapTypeId.ROADMAP
+		};    
+		var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);  
+		var marker = new google.maps.Marker({
+			position:myCenter,
+		});
+		marker.setMap(map);
+	}    
+	google.maps.event.addDomListener(window, 'load', initialize);
+</script>
+
+</body>
+</html>
